@@ -1,0 +1,51 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace FacultySystem
+{
+    public partial class ModifingGrade : Form
+    {
+
+        string Name;
+        DataTable Student;
+        DataTable dt;
+
+        public ModifingGrade(string name, DataTable student)
+        {
+            InitializeComponent();
+
+            Name = name;
+            Student = student;
+
+            label1.Text = Name;
+            dt = new DataTable();
+            dt.Columns.Add("Grade", typeof(string));
+            dt.Columns.Add("Type", typeof(string));
+            dt.Columns.Add("Date", typeof(string));
+
+            int numGrades = Student.Rows.Count;
+            for(int i = 0; i < numGrades; i++)
+            {
+                DataRow dr = Student.Rows[i];
+                DataRow row = dt.NewRow();
+                row["Grade"] = dr.ItemArray[1].ToString();
+                row["Type"] = dr.ItemArray[3].ToString();
+                row["Date"] = dr.ItemArray[2].ToString();
+            }
+
+            dataGridView1.DataSource = dt;
+        }
+
+        private void ModifingGrade_Load(object sender, EventArgs e)
+        {
+
+        }
+    }
+}
