@@ -31,3 +31,4 @@ C:\Users\Aleksandar\source\repos\HighSchoolManagement\bin\Debug\System.Data.SQLi
 C:\Users\Aleksandar\source\repos\HighSchoolManagement\obj\Debug\HighSchoolManagement.ProfessorForm.resources
 C:\Users\Aleksandar\source\repos\HighSchoolManagement\obj\Debug\HighSchoolManagement.Class_Grade.resources
 C:\Users\Aleksandar\source\repos\HighSchoolManagement\obj\Debug\HighSchoolManagement.ModifyGrades.resources
+C:\Users\Aleksandar\source\repos\HighSchoolManagement\obj\Debug\HighSchoolManagement.AddGrade.resources

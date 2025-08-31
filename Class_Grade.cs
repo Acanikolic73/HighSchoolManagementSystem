@@ -15,12 +15,16 @@ namespace HighSchoolManagement
     {
 
         DataTable dt; // datatable for datagrid view
-        DataSet dataSet; // for each student grades
+        DataSet dataSet, SetOfStudents; // for each student grades
+        string Teacher_id;
+        string Subject;
 
-        public Class_Grade(string t, string subject, string Class, string id)
+        public Class_Grade(string teacher_id, string ss, string t, string subject, string Class, string id)
         {
             InitializeComponent();
 
+            Subject = ss;
+            Teacher_id = teacher_id;
             dataSet = new DataSet();
 
             /* initializing datatable columns */
@@ -54,7 +58,7 @@ namespace HighSchoolManagement
             /* first and last name of student that belong to that Class */
             DataBaseConnection db1 = new DataBaseConnection();
             db1.query = "select student_id, first_name, last_name from Student where class_id = '" + Class + "'";
-            DataSet SetOfStudents = db1.Data();
+            SetOfStudents = db1.Data();
 
             int numOfStudents = SetOfStudents.Tables[0].Rows.Count;
 
@@ -105,7 +109,7 @@ namespace HighSchoolManagement
 
                 DataBaseConnection ClassForm = new DataBaseConnection();
                 ClassForm.query = "select * from Grade g join Enrollment e on g.student_id = e.student_id join Subject s on e.subject_id = s.subject_id where g.student_id = '" + ID + "' and s.subject_id = '" + id + "'";
-                DataTable tmp = ClassForm.Data().Tables[0].Clone();
+                DataTable tmp = ClassForm.Data().Tables[0].Copy();
                 dataSet.Tables.Add(tmp);
             }
 
@@ -130,8 +134,9 @@ namespace HighSchoolManagement
                 return;
             }
             DataTable Student = dataSet.Tables[e.RowIndex];
+            DataRow row = SetOfStudents.Tables[0].Rows[e.RowIndex];
             string name = dt.Rows[e.RowIndex].ItemArray[0].ToString();
-            ModifyGrades f = new ModifyGrades(name, Student);
+            ModifyGrades f = new ModifyGrades(Subject, Teacher_id, row, Student);
             f.Show();
 
         }

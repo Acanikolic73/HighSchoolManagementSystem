@@ -13,15 +13,18 @@ namespace HighSchoolManagement
     public partial class ModifyGrades : Form
     {
 
-        string Name;
+        DataRow StudentData;
         DataTable Student;
         DataTable dt;
+        string subject, teacher_id;
 
-        public ModifyGrades(string name, DataTable student)
+        public ModifyGrades(string Subject, string Teacher_id, DataRow studentdata, DataTable student)
         {
             InitializeComponent();
 
-            Name = name;
+            subject = Subject;
+            teacher_id = Teacher_id;
+            StudentData = studentdata;
             Student = student;
 
             label1.Text = Name;
@@ -38,6 +41,7 @@ namespace HighSchoolManagement
                 row["Grade"] = dr.ItemArray[1].ToString();
                 row["Type"] = dr.ItemArray[3].ToString();
                 row["Date"] = dr.ItemArray[2].ToString();
+                dt.Rows.Add(row);
             }
 
             dataGridView1.DataSource = dt;
@@ -47,6 +51,12 @@ namespace HighSchoolManagement
         private void ModifyGrades_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            AddGrade f = new AddGrade(subject, teacher_id, StudentData, Student);
+            f.Show();
         }
     }
 }

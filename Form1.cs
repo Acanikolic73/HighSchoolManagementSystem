@@ -83,6 +83,7 @@ namespace HighSchoolManagement
                 if (dr.ItemArray[4].ToString() == Password)
                 {
                     //getting teachers data
+                    string teacher_id = dr.ItemArray[0].ToString();
                     string first_name = dr.ItemArray[1].ToString();
                     string last_name = dr.ItemArray[2].ToString();
                     string email = dr.ItemArray[3].ToString();
@@ -102,7 +103,7 @@ namespace HighSchoolManagement
                     }
 
                     Teacher teacher = new Teacher(first_name, last_name, email, Age, teacher_class);
-                    ProfessorForm f = new ProfessorForm(teacher);
+                    ProfessorForm f = new ProfessorForm(teacher_id, teacher);
                     f.Show();
                     this.Hide();
                 }

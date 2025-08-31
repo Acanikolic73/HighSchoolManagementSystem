@@ -3,7 +3,7 @@ using System.Data.SQLite;
 
 public class DataBaseConnection
 {
-    public string connectionString = @"Data Source=C:\Users\Aleksandar\source\repos\HighSchoolManagementSystem\Baza.db";
+    public string connectionString = @"Data Source=C:\Users\Aleksandar\source\repos\HighSchoolManagement\Baza.db";
     public string query;
     private SQLiteDataAdapter da;
 
@@ -23,5 +23,29 @@ public class DataBaseConnection
     {
         SQLiteCommandBuilder cb = new SQLiteCommandBuilder(da);
         da.Update(ds.Tables[0]);
+    }
+
+    public int ExecuteNonQuery(string sql)
+    {
+        using (SQLiteConnection con = new SQLiteConnection(connectionString))
+        {
+            con.Open();
+            using (SQLiteCommand cmd = new SQLiteCommand(sql, con))
+            {
+                return cmd.ExecuteNonQuery();
+            }
+        }
+    }
+
+    public object ExecuteScalar(string sql)
+    {
+        using (SQLiteConnection con = new SQLiteConnection(connectionString))
+        {
+            con.Open();
+            using (SQLiteCommand cmd = new SQLiteCommand(sql, con))
+            {
+                return cmd.ExecuteScalar();
+            }
+        }
     }
 }

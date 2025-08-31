@@ -20,10 +20,15 @@ namespace HighSchoolManagement
 
         DataBaseConnection dataBaseConnection;
 
-        public ProfessorForm(Teacher t)
+        string Teacher_id;
+        List<string> Ids;
+
+        public ProfessorForm(string teacher_id, Teacher t)
         {
             InitializeComponent();
 
+            Ids = new List<string>();
+            Teacher_id = teacher_id; 
             teacher = t;
 
             //filling the fields(labels) with teachers data
@@ -64,6 +69,7 @@ namespace HighSchoolManagement
                 {
                     DataRow row = ds.Tables[0].Rows[j];
                     dataTable.Rows.Add(name, row.ItemArray[0].ToString());
+                    Ids.Add(id);
                 }
 
             }
@@ -95,7 +101,7 @@ namespace HighSchoolManagement
             string Class = dr.ItemArray[1].ToString();
             string t = teacher.FirstName + " " + teacher.LastName;
 
-            Class_Grade f = new Class_Grade(t, subject, Class, id);
+            Class_Grade f = new Class_Grade(Teacher_id, Ids[e.RowIndex], t, subject, Class, id);
             f.Show();
             this.Hide();
         }
