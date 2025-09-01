@@ -76,6 +76,10 @@ namespace HighSchoolManagement
                 }
                 avg = sum / numGrades;
 
+                // rounding avg on 2 decimals
+
+                avg = Math.Round(avg, 2);
+
                 /* filling datagrid view with datas and storing in datatable */
 
                 dataTable.Rows.Add(name, Grades, avg);

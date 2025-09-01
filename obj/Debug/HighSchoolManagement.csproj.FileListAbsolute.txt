@@ -32,3 +32,5 @@ C:\Users\Aleksandar\source\repos\HighSchoolManagement\obj\Debug\HighSchoolManage
 C:\Users\Aleksandar\source\repos\HighSchoolManagement\obj\Debug\HighSchoolManagement.Class_Grade.resources
 C:\Users\Aleksandar\source\repos\HighSchoolManagement\obj\Debug\HighSchoolManagement.ModifyGrades.resources
 C:\Users\Aleksandar\source\repos\HighSchoolManagement\obj\Debug\HighSchoolManagement.AddGrade.resources
+C:\Users\Aleksandar\source\repos\HighSchoolManagement\obj\Debug\HighSchoolManagement.DeleteGrade.resources
+C:\Users\Aleksandar\source\repos\HighSchoolManagement\obj\Debug\HighSchoolManagement.ChangeGrade.resources

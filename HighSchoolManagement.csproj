@@ -89,6 +89,12 @@
     <Compile Include="AddGrade.Designer.cs">
       <DependentUpon>AddGrade.cs</DependentUpon>
     </Compile>
+    <Compile Include="ChangeGrade.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangeGrade.Designer.cs">
+      <DependentUpon>ChangeGrade.cs</DependentUpon>
+    </Compile>
     <Compile Include="Class_Grade.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,6 +102,12 @@
       <DependentUpon>Class_Grade.cs</DependentUpon>
     </Compile>
     <Compile Include="DataBaseConnection.cs" />
+    <Compile Include="DeleteGrade.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteGrade.Designer.cs">
+      <DependentUpon>DeleteGrade.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -128,8 +140,14 @@
     <EmbeddedResource Include="AddGrade.resx">
       <DependentUpon>AddGrade.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ChangeGrade.resx">
+      <DependentUpon>ChangeGrade.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Class_Grade.resx">
       <DependentUpon>Class_Grade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteGrade.resx">
+      <DependentUpon>DeleteGrade.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
