@@ -120,7 +120,9 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.MaximizeBox = false;
             this.Name = "AddGrade";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddGrade";
             this.Load += new System.EventHandler(this.AddGrade_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();

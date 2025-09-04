@@ -21,6 +21,11 @@ namespace HighSchoolManagement
 
             Student = student;
 
+            if(Student.gender == "female")
+            {
+                pictureBox1.Image = Image.FromFile(@"C:\Users\Aleksandar\source\repos\HighSchoolManagement\Pictures\female_icon.png");
+            }
+
             // filling data on form with student datas
 
             labelHead.Text = "Welcome " + Student.FirstName + " " + Student.LastName;
@@ -28,7 +33,6 @@ namespace HighSchoolManagement
             labelLastName.Text = Student.LastName.ToString();
             labelClassName.Text = Student.class_name.ToString();
             labelBirthDate.Text = Student.Date_of_birth.ToString("dd.MM.yyyy");
-            labelEmail.Text = Student.Email.ToString();
 
 
             /// store subject in datagridview, just name of subject
@@ -45,6 +49,7 @@ namespace HighSchoolManagement
 
             DataSet ds = db.Data();
             int numSubjects = ds.Tables[0].Rows.Count;
+            double AVG = 0;
             for (int i = 0; i < numSubjects; i++)
             {
                 DataRow row = ds.Tables[0].Rows[i];
@@ -79,16 +84,55 @@ namespace HighSchoolManagement
                 // rounding avg on 2 decimals
 
                 avg = Math.Round(avg, 2);
+                AVG += avg;
 
                 /* filling datagrid view with datas and storing in datatable */
 
                 dataTable.Rows.Add(name, Grades, avg);
             }
 
+            AVG /= numSubjects;
+            labelEmail.Text = AVG.ToString();
             dataGridView1.DataSource = dataTable;
 
         }
         private void StudentForm_Load(object sender, EventArgs e)
+        {
+            // panels
+            panel2.BackColor = Color.FromArgb(164, 176, 190); // footer panel
+            panel3.BackColor = Color.FromArgb(116, 125, 140); // line panel
+
+
+
+
+            //for header
+            dataGridView1.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(30, 30, 30); // dark color for header of datagridview
+            dataGridView1.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            dataGridView1.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 10, FontStyle.Bold);
+
+            //for rows
+            dataGridView1.RowsDefaultCellStyle.BackColor = Color.White;
+            dataGridView1.RowsDefaultCellStyle.ForeColor = Color.Black;
+            dataGridView1.RowsDefaultCellStyle.Font = new Font("Segoe UI", 9);
+            dataGridView1.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(240, 240, 240); 
+            dataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dataGridView1.GridColor = Color.LightGray;
+
+            //hover effect
+            dataGridView1.DefaultCellStyle.SelectionBackColor = Color.FromArgb(0, 120, 215); 
+            dataGridView1.DefaultCellStyle.SelectionForeColor = Color.White;
+
+            dataGridView1.DefaultCellStyle.Padding = new Padding(5); 
+            dataGridView1.ColumnHeadersDefaultCellStyle.Padding = new Padding(10, 5, 10, 5);
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelClassName_Click(object sender, EventArgs e)
         {
 
         }

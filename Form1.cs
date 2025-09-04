@@ -1,4 +1,5 @@
 ﻿using FacultySystem;
+using Microsoft.Win32.SafeHandles;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -118,12 +119,89 @@ namespace HighSchoolManagement
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            //set color for components
+            label1.ForeColor = Color.FromArgb(44, 62, 80); // header
+            label2.ForeColor = Color.FromArgb(47, 54, 64); // email
+            label3.ForeColor = Color.FromArgb(47, 54, 64); // password
+            label4.ForeColor = Color.FromArgb(74, 144, 226); // forgot password
+            button1.BackColor = Color.FromArgb(74, 144, 226); // login button
+            panel2.BackColor = Color.FromArgb(164, 176, 190); // footer panel
+            panel3.BackColor = Color.FromArgb(116, 125, 140); // line panel
+            //label5.ForeColor = Color.White; // copyright label
 
+            //set text for email and password labels
+            textBox1.Text = "Email";
+            textBox2.UseSystemPasswordChar = false;
+            textBox2.PasswordChar = '\0';
+            textBox2.Text = "Password";
         }
 
         private void button1_Click_1(object sender, EventArgs e)
         {
             CheckLogin();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        bool shownEmail = false, shownPassword = false;
+
+        private void textBox1_Enter(object sender, EventArgs e)
+        {
+            if(!shownEmail)
+            {
+                shownEmail = true;
+                textBox1.Text = "";
+            }
+        }
+
+        private void textBox2_Enter(object sender, EventArgs e)
+        {
+            if(!shownPassword)
+            {
+                shownPassword = true;
+                textBox2.UseSystemPasswordChar = true;
+                textBox2.PasswordChar = '.';
+                textBox2.Text = "";
+            }
+        }
+
+        private void textBox2_Leave(object sender, EventArgs e)
+        {
+            if (textBox2.Text != "") return;
+            shownPassword = false;
+            textBox2.UseSystemPasswordChar = false;
+            textBox2.PasswordChar = '\0';
+            textBox2.Text = "Password";
+        }
+
+        bool showPassword = false;
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            if(showPassword)
+            {
+                textBox2.UseSystemPasswordChar = true;
+                textBox2.PasswordChar = '.';
+                pictureBox3.Image = Image.FromFile(@"C:\Users\Aleksandar\source\repos\HighSchoolManagement\Pictures\show_password.png");
+                showPassword = false;
+            }
+            else
+            {
+                textBox2.UseSystemPasswordChar = false;
+                textBox2.PasswordChar = '\0';
+                pictureBox3.Image = Image.FromFile(@"C:\Users\Aleksandar\source\repos\HighSchoolManagement\Pictures\hide_password.png");
+                showPassword = true;
+            }
+        }
+
+        private void textBox1_Leave(object sender, EventArgs e)
+        {
+            if (textBox1.Text != "") return;
+            shownEmail = false;
+            textBox1.Text = "Email";
         }
     }
 }

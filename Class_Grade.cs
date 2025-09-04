@@ -119,7 +119,7 @@ namespace HighSchoolManagement
 
             // initializing datas
 
-            label1.Text = Class;
+            label1.Text = "Class: " + Class;
             label3.Text = t;
             label5.Text = subject;
 
@@ -146,6 +146,30 @@ namespace HighSchoolManagement
 
         private void Class_Grade_Load(object sender, EventArgs e)
         {
+            ///panels
+            panel2.BackColor = Color.FromArgb(164, 176, 190); // footer panel
+            panel3.BackColor = Color.FromArgb(116, 125, 140); // line panel
+
+
+            //for header
+            dataGridView1.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(30, 30, 30); // dark color for header of datagridview
+            dataGridView1.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            dataGridView1.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 10, FontStyle.Bold);
+
+            //for rows
+            dataGridView1.RowsDefaultCellStyle.BackColor = Color.White;
+            dataGridView1.RowsDefaultCellStyle.ForeColor = Color.Black;
+            dataGridView1.RowsDefaultCellStyle.Font = new Font("Segoe UI", 9);
+            dataGridView1.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(240, 240, 240);
+            dataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dataGridView1.GridColor = Color.LightGray;
+
+            //hover effect
+            dataGridView1.DefaultCellStyle.SelectionBackColor = Color.FromArgb(0, 120, 215);
+            dataGridView1.DefaultCellStyle.SelectionForeColor = Color.White;
+
+            dataGridView1.DefaultCellStyle.Padding = new Padding(5);
+            dataGridView1.ColumnHeadersDefaultCellStyle.Padding = new Padding(10, 5, 10, 5);
 
         }
 
