@@ -40,16 +40,18 @@
             this.label_last_name = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.labelFirst_name = new System.Windows.Forms.Label();
-            this.label_head = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.labelHead = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -61,7 +63,7 @@
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.EnableHeadersVisualStyles = false;
-            this.dataGridView1.Location = new System.Drawing.Point(372, 102);
+            this.dataGridView1.Location = new System.Drawing.Point(372, 96);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
@@ -171,16 +173,6 @@
             this.labelFirst_name.TabIndex = 13;
             this.labelFirst_name.Text = "Aleksandar";
             // 
-            // label_head
-            // 
-            this.label_head.AutoSize = true;
-            this.label_head.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_head.Location = new System.Drawing.Point(229, 26);
-            this.label_head.Name = "label_head";
-            this.label_head.Size = new System.Drawing.Size(163, 45);
-            this.label_head.TabIndex = 12;
-            this.label_head.Text = "Welcome";
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
@@ -195,7 +187,7 @@
             this.panel1.Controls.Add(this.label_last_name);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.labelFirst_name);
-            this.panel1.Location = new System.Drawing.Point(12, 102);
+            this.panel1.Location = new System.Drawing.Point(12, 96);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(337, 371);
             this.panel1.TabIndex = 24;
@@ -212,9 +204,9 @@
             // 
             // panel3
             // 
-            this.panel3.Location = new System.Drawing.Point(-1, 496);
+            this.panel3.Location = new System.Drawing.Point(-1, 491);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(899, 5);
+            this.panel3.Size = new System.Drawing.Size(912, 6);
             this.panel3.TabIndex = 26;
             // 
             // panel2
@@ -236,16 +228,35 @@
             this.label5.Text = "@ Copyright High School Management";
             this.label5.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.labelHead);
+            this.panel4.Location = new System.Drawing.Point(0, -2);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(909, 64);
+            this.panel4.TabIndex = 27;
+            // 
+            // labelHead
+            // 
+            this.labelHead.AutoSize = true;
+            this.labelHead.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelHead.ForeColor = System.Drawing.Color.White;
+            this.labelHead.Location = new System.Drawing.Point(170, 11);
+            this.labelHead.Name = "labelHead";
+            this.labelHead.Size = new System.Drawing.Size(117, 46);
+            this.labelHead.TabIndex = 0;
+            this.labelHead.Text = "label4";
+            // 
             // ProfessorForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(910, 527);
+            this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.label_head);
             this.MaximizeBox = false;
             this.Name = "ProfessorForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -257,8 +268,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -275,11 +287,12 @@
         private System.Windows.Forms.Label label_last_name;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label labelFirst_name;
-        private System.Windows.Forms.Label label_head;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Label labelHead;
     }
 }

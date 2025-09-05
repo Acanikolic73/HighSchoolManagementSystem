@@ -147,6 +147,7 @@ namespace HighSchoolManagement
         private void Class_Grade_Load(object sender, EventArgs e)
         {
             ///panels
+            panel4.BackColor = Color.FromArgb(44, 62, 80);
             panel2.BackColor = Color.FromArgb(164, 176, 190); // footer panel
             panel3.BackColor = Color.FromArgb(116, 125, 140); // line panel
 

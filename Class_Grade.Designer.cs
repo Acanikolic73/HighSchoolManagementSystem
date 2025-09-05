@@ -42,9 +42,11 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // label8
@@ -131,11 +133,12 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(309, 9);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(307, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(139, 38);
+            this.label1.Size = new System.Drawing.Size(157, 38);
             this.label1.TabIndex = 11;
-            this.label1.Text = "Clas 1A";
+            this.label1.Text = "Class 1A";
             // 
             // dataGridView1
             // 
@@ -146,7 +149,7 @@
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.EnableHeadersVisualStyles = false;
-            this.dataGridView1.Location = new System.Drawing.Point(333, 91);
+            this.dataGridView1.Location = new System.Drawing.Point(333, 78);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
@@ -169,16 +172,16 @@
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Location = new System.Drawing.Point(23, 91);
+            this.panel1.Location = new System.Drawing.Point(23, 78);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(293, 347);
             this.panel1.TabIndex = 20;
             // 
             // panel3
             // 
-            this.panel3.Location = new System.Drawing.Point(0, 445);
+            this.panel3.Location = new System.Drawing.Point(0, 440);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(804, 5);
+            this.panel3.Size = new System.Drawing.Size(818, 6);
             this.panel3.TabIndex = 22;
             // 
             // panel2
@@ -200,16 +203,24 @@
             this.label10.Text = "@ Copyright High School Management";
             this.label10.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.label1);
+            this.panel4.Location = new System.Drawing.Point(2, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(813, 57);
+            this.panel4.TabIndex = 23;
+            // 
             // Class_Grade
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(816, 478);
+            this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
             this.MaximizeBox = false;
             this.Name = "Class_Grade";
@@ -221,8 +232,9 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -242,5 +254,6 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Panel panel4;
     }
 }

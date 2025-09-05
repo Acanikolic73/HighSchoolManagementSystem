@@ -34,15 +34,18 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(191, 18);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(104, 10);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(104, 41);
             this.label1.TabIndex = 0;
@@ -50,9 +53,12 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(198, 413);
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(185, 416);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(112, 39);
+            this.button1.Size = new System.Drawing.Size(133, 48);
             this.button1.TabIndex = 2;
             this.button1.Text = "Delete";
             this.button1.UseVisualStyleBackColor = true;
@@ -60,7 +66,7 @@
             // 
             // panel3
             // 
-            this.panel3.Location = new System.Drawing.Point(0, 458);
+            this.panel3.Location = new System.Drawing.Point(0, 481);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(529, 10);
             this.panel3.TabIndex = 10;
@@ -68,7 +74,7 @@
             // panel2
             // 
             this.panel2.Controls.Add(this.label5);
-            this.panel2.Location = new System.Drawing.Point(0, 458);
+            this.panel2.Location = new System.Drawing.Point(0, 481);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(530, 43);
             this.panel2.TabIndex = 9;
@@ -93,7 +99,7 @@
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.EnableHeadersVisualStyles = false;
-            this.dataGridView1.Location = new System.Drawing.Point(29, 74);
+            this.dataGridView1.Location = new System.Drawing.Point(30, 74);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
@@ -104,16 +110,24 @@
             this.dataGridView1.Size = new System.Drawing.Size(466, 320);
             this.dataGridView1.TabIndex = 24;
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Location = new System.Drawing.Point(0, -1);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(529, 59);
+            this.panel1.TabIndex = 25;
+            // 
             // DeleteGrade
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(529, 501);
+            this.ClientSize = new System.Drawing.Size(529, 523);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.label1);
             this.MaximizeBox = false;
             this.Name = "DeleteGrade";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -122,8 +136,9 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -135,5 +150,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Panel panel1;
     }
 }

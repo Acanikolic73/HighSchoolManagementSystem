@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -67,9 +68,23 @@ namespace HighSchoolManagement
 
         private void ModifyGrades_Load(object sender, EventArgs e)
         {
+            ///buttons
+            button1.BackColor = Color.FromArgb(41, 128, 185);
+            button1.ForeColor = Color.White;
+            button2.BackColor = Color.FromArgb(231, 76, 60);
+            button2.ForeColor = Color.White;
+            button3.BackColor = Color.FromArgb(230, 126, 34);
+            button3.ForeColor = Color.White;
+
+            //round buttons
+            /*RoundButton(button1, 20);
+            RoundButton(button2, 20);
+            RoundButton(button3, 20);*/
+
             ///panels
             panel2.BackColor = Color.FromArgb(164, 176, 190); // footer panel
             panel3.BackColor = Color.FromArgb(116, 125, 140); // line panel
+            panel1.BackColor = Color.FromArgb(44, 62, 80);
 
 
             //for header
@@ -111,5 +126,6 @@ namespace HighSchoolManagement
             AddGrade f = new AddGrade(subject, teacher_id, StudentData, Student, this);
             f.Show();
         }
+
     }
 }

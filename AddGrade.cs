@@ -33,6 +33,14 @@ namespace HighSchoolManagement
 
         private void AddGrade_Load(object sender, EventArgs e)
         {
+            ///panels
+            panel2.BackColor = Color.FromArgb(164, 176, 190); // footer panel
+            panel3.BackColor = Color.FromArgb(116, 125, 140); // line panel
+            panel1.BackColor = Color.FromArgb(44, 62, 80);
+
+            //button
+            button1.BackColor = Color.FromArgb(41, 128, 185);
+            button1.ForeColor = Color.White;
         }
 
         private void InsertEnrollment(string student_id)

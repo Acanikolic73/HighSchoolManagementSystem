@@ -33,7 +33,7 @@ namespace HighSchoolManagement
 
             //filling the fields(labels) with teachers data
 
-            label_head.Text = "Welcome teacher, " + teacher.FirstName + " " + teacher.LastName;
+            labelHead.Text = "Welcome teacher, " + teacher.FirstName + " " + teacher.LastName;
             labelFirst_name.Text = teacher.FirstName;
             label_last_name.Text = teacher.LastName;
             labelClass.Text = teacher.teacher_class;
@@ -83,6 +83,7 @@ namespace HighSchoolManagement
         private void ProfessorForm_Load(object sender, EventArgs e)
         {
             ///panels
+            panel4.BackColor = Color.FromArgb(44, 62, 80);
             panel2.BackColor = Color.FromArgb(164, 176, 190); // footer panel
             panel3.BackColor = Color.FromArgb(116, 125, 140); // line panel
 
@@ -127,6 +128,11 @@ namespace HighSchoolManagement
             Class_Grade f = new Class_Grade(Teacher_id, Ids[e.RowIndex], t, subject, Class, id);
             f.Show();
             this.Hide();
+        }
+
+        private void label_head_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

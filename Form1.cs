@@ -120,7 +120,7 @@ namespace HighSchoolManagement
         private void Form1_Load(object sender, EventArgs e)
         {
             //set color for components
-            label1.ForeColor = Color.FromArgb(44, 62, 80); // header
+            panel4.BackColor = Color.FromArgb(44, 62, 80);
             label2.ForeColor = Color.FromArgb(47, 54, 64); // email
             label3.ForeColor = Color.FromArgb(47, 54, 64); // password
             label4.ForeColor = Color.FromArgb(74, 144, 226); // forgot password
@@ -181,6 +181,7 @@ namespace HighSchoolManagement
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
+            if (textBox1.Text == "Password") return;
             if(showPassword)
             {
                 textBox2.UseSystemPasswordChar = true;

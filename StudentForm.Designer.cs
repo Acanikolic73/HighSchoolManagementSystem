@@ -46,17 +46,19 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // labelHead
             // 
             this.labelHead.AutoSize = true;
             this.labelHead.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelHead.Location = new System.Drawing.Point(256, 19);
+            this.labelHead.Location = new System.Drawing.Point(198, 9);
             this.labelHead.Name = "labelHead";
             this.labelHead.Size = new System.Drawing.Size(163, 45);
             this.labelHead.TabIndex = 0;
@@ -174,7 +176,7 @@
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.EnableHeadersVisualStyles = false;
-            this.dataGridView1.Location = new System.Drawing.Point(377, 107);
+            this.dataGridView1.Location = new System.Drawing.Point(377, 86);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
@@ -199,7 +201,7 @@
             this.panel1.Controls.Add(this.labelLastName);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.labelFirstName);
-            this.panel1.Location = new System.Drawing.Point(12, 107);
+            this.panel1.Location = new System.Drawing.Point(12, 86);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(329, 369);
             this.panel1.TabIndex = 12;
@@ -216,9 +218,9 @@
             // 
             // panel3
             // 
-            this.panel3.Location = new System.Drawing.Point(-1, 482);
+            this.panel3.Location = new System.Drawing.Point(-1, 477);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(897, 5);
+            this.panel3.Size = new System.Drawing.Size(911, 6);
             this.panel3.TabIndex = 14;
             // 
             // panel2
@@ -240,17 +242,25 @@
             this.label5.Text = "@ Copyright High School Management";
             this.label5.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.labelHead);
+            this.panel4.Location = new System.Drawing.Point(-1, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(906, 64);
+            this.panel4.TabIndex = 15;
+            // 
             // StudentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(908, 514);
+            this.ClientSize = new System.Drawing.Size(908, 516);
+            this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.labelHead);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "StudentForm";
@@ -263,8 +273,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -287,5 +298,6 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Panel panel4;
     }
 }

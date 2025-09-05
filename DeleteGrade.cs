@@ -22,7 +22,7 @@ namespace HighSchoolManagement
         { 
 
             string ID = Student.ItemArray[0].ToString();
-            string name = Student.ItemArray[1].ToString() + Student.ItemArray[2].ToString();
+            string name = Student.ItemArray[1].ToString() + " " + Student.ItemArray[2].ToString();
             label1.Text = name;
 
             DataBaseConnection Con = new DataBaseConnection();
@@ -95,6 +95,8 @@ namespace HighSchoolManagement
             ///panels
             panel2.BackColor = Color.FromArgb(164, 176, 190); // footer panel
             panel3.BackColor = Color.FromArgb(116, 125, 140); // line panel
+            panel1.BackColor = Color.FromArgb(44, 62, 80);
+
 
 
             //for header
@@ -117,6 +119,9 @@ namespace HighSchoolManagement
             dataGridView1.DefaultCellStyle.Padding = new Padding(5);
             dataGridView1.ColumnHeadersDefaultCellStyle.Padding = new Padding(10, 5, 10, 5);
 
+            // buttons
+            button1.BackColor = Color.FromArgb(231, 76, 60);
+            button1.ForeColor = Color.White;
         }
     }
 }
